@@ -1,7 +1,7 @@
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Navbar from "./components/navbar";
-import Home from "./components/home";
-import SearchTrain from "./components/searchtrain";
+import Home from "./pages/Home";
+import SearchTrain from "./pages/Search.js";
 
 const App=()=>{
   return (
@@ -11,7 +11,7 @@ const App=()=>{
          <Navbar/>
           <Route path="/" element={<Home/>}/>
           <Route path="/home" element={<Home/>}/>
-          <Route path="/searchtrain" element={<SearchTrain/>}/>
+          <Route path="/search" element={<SearchTrain/>}/>
         </Routes>
       </BrowserRouter>
     </> 
