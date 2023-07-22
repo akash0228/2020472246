@@ -7,7 +7,7 @@ route.get('/',(req,res)=>{
     res.send("Test");
 });
 
-route.get('/trains',getAllTrains);
+route.get('/trains/:type',getAllTrains);
 route.get('/searchtrain/:number',getTrainByNumber);
 
 module.exports=route;
