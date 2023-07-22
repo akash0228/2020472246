@@ -27,13 +27,13 @@ const Train = (props) => {
           </p>
           <p className="card-text">
             AC
-            {`  Seats Available: ${AC}      `}
-            {`Price: Rs${ACPrice}`}
+            {` Seats Available: ${AC}`}
+            {`  Price: Rs${ACPrice}`}
           </p>
           <p className="card-text">
             Sleeper
-            {`  Seats Available: ${sleeper}       `}
-            {`Price: Rs${sleeperPrice}`}
+            {` Seats Available: ${sleeper}`}
+            {`    Price: Rs${sleeperPrice}`}
           </p>
           <p className="card-text">
              {`Delayed By: ${delayed} min`}
