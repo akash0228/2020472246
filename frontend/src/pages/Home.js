@@ -13,11 +13,11 @@ const Home = () => {
           setTrains(result.data);
           setisData(true);
         } else {
-          setisData(false); // Reset to false when no train data is available
+          setisData(false); 
         }
       } catch (error) {
         console.error("Error fetching train data:", error);
-        setisData(false); // Reset to false on error as well
+        setisData(false);
       }
   }
 
