@@ -19,9 +19,6 @@ const sortTrain=(allTrains)=>{
         return timeDifference > 30 && timeDifference <= 720;
     });
 
-    // console.log('====================================');
-    // console.log(filteredTrains);
-    // console.log('====================================');
 
     filteredTrains.sort((a, b) => {
         if (a.price !== b.price) {
@@ -78,9 +75,6 @@ module.exports.getAllTrains=async(req,res)=>{
             }
         }
         const response= await axios.get("http://20.244.56.144/train/trains",config);
-        // console.log('====================================');
-        // console.log(response.data);
-        // console.log('====================================');
         const filteredTrains=sortTrain(response.data);
         return res.status(200).json(filteredTrains);
     } catch (error) {
@@ -91,7 +85,7 @@ module.exports.getAllTrains=async(req,res)=>{
 module.exports.getTrainByNumber=async(req,res)=>{
     try {
         const number = req.params.number;
-        const token=getAuthorisation();
+        const token=await getAuthorisation();
         if(token==null){
             return res.status(500).json("Authorisation revoked");
         }
@@ -100,7 +94,11 @@ module.exports.getTrainByNumber=async(req,res)=>{
               'Authorization': `Bearer ${token}`
             }
         }
-        const train= await axios.get(`http://20.244.56.144/train/trains/${number}`,config);
+        const response= await axios.get(`http://20.244.56.144/train/trains/${number}`,config);
+        const train=response.data;
+        console.log('====================================');
+        console.log(train);
+        console.log('====================================');
         return res.status(200).json(train);
     } catch (error) {
         return res.status(500).json(error.message);
