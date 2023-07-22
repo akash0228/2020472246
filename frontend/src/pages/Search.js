@@ -5,8 +5,7 @@ import axios from "axios";
 
 const Search = () => {
     const [data, setData] = useState(false);
-  const url = "";
-  // const trains = async axios.get(url)
+//   const train= async axios.get(url)
   return (
     <div>
       <div className="input-group">
