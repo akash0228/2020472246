@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Navbar from "../component/Navbar";
-import Train from "../component/Train";
+import Navbar from "../components/Navbar";
+import Train from "../components/Train";
 import axios from "axios";
 
 const Search = () => {
@@ -9,7 +9,6 @@ const Search = () => {
   // const trains = async axios.get(url)
   return (
     <div>
-      <Navbar />
       <div className="input-group">
         <div className="form-outline">
           <input type="search" id="form1" className="form-control" />

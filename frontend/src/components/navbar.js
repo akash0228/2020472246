@@ -14,7 +14,7 @@ const Navbar = () => {
             <ul className="navbar-nav mb-2 mb-lg-0">
               <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/">
-                  All Trains
+                  Upcoming Trains 
                 </Link>
               </li>
               <li className="nav-item">

@@ -1,36 +1,40 @@
 import React from "react";
 
 const Train = (props) => {
-    const trainName = props.name;
-    const trainNumber = props.number;
+    const trainName = props.props.trainName;
+    const trainNumber = props.props.trainNumber;
     const duration = {
-        hours: props.hours,
-        minutes: props.minutes,
-        second: props.second
+        hours: props.props.departureTime.Hours,
+        minutes: props.props.departureTime.Minutes,
+        second: props.props.departureTime.Seconds
     }
-    const type = props.type;
-    const seats = props.seat;
-    const price = props.price;
-    const delayed = props.delayed;
+    const AC= props.props.seatsAvailable.AC;
+    const sleeper=props.props.seatsAvailable.sleeper;
+
+    const ACPrice =props.props.price.AC;
+    const sleeperPrice=props.props.price.sleeper;
+    const delayed =props.props.delayedBy;
   return (
-    <div>
+    <>
       <div className="card w-75">
         <div className="card-body">
-          <h5 className="card-title">{trainName}</h5>
+          <h5 className="card-title">Train Name:{trainName}</h5>
           <p className="card-text">
-            {trainNumber}
+            Train Number:{trainNumber}
           </p>
           <p className="card-text">
-            {`${duration.hours}HR:${duration.minutes}MIN:${duration.second}SEC`}
+            {`Departure Time:${duration.hours}:${duration.minutes}`}
           </p>
           <p className="card-text">
-            {`Type: ${type}`}
-            {`Price: ${price}`}
-            {`Delayed By: ${delayed}`}
+            {`AC seats Available: ${AC}`}
+            {`sleeper seats Available: ${sleeper}`}
+            {`AC Price: ${ACPrice}`}
+            {`sleeper Price: ${sleeperPrice}`}
+            {`Delayed By: ${delayed} min`}
           </p>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
