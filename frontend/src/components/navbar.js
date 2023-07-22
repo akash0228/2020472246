@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 const Navbar = () => {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg navbar-light bg-info">
         {/* Container wrapper */}
         <div className="container-fluid">
           <div
@@ -11,15 +11,15 @@ const Navbar = () => {
             id="navbarCenteredExample"
           >
             {/* Left links */}
-            <ul className="navbar-nav mb-2 mb-lg-0">
+            <ul className="navbar-nav mb-2 mb-lg-0 ">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/">
+                <Link className="nav-link active text-white" aria-current="page" to="/">
                   Upcoming Trains 
                 </Link>
               </li>
-              <li className="nav-item">
+              <li className="nav-item ">
                 <Link
-                  className="nav-link active"
+                  className="nav-link text-white"
                   aria-current="page"
                   to="/search"
                 >

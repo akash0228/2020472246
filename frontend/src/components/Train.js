@@ -16,30 +16,19 @@ const Train = (props) => {
     const delayed =props.props.delayedBy;
   return (
     <>
-      <div className="card w-75">
-        <div className="card-body">
-          <h4 className="card-title">Train Name:{trainName}</h4>
-          <p className="card-text">
-            Train Number:{trainNumber}
-          </p>
-          <p className="card-text">
-            {`Departure Time:${duration.hours}:${duration.minutes}`}
-          </p>
-          <p className="card-text">
-            AC
-            {` Seats Available: ${AC}`}
-            {`  Price: Rs${ACPrice}`}
-          </p>
-          <p className="card-text">
-            Sleeper
-            {` Seats Available: ${sleeper}`}
-            {`    Price: Rs${sleeperPrice}`}
-          </p>
-          <p className="card-text">
-             {`Delayed By: ${delayed} min`}
-          </p>
+      <div class="card" >
+        <div class="card-body">
+            <h5 class="card-title">Train Name: {trainName}</h5>
+            <p class="card-text">Train Number: {trainNumber}</p>
         </div>
-      </div>
+        <ul class="list-group">
+            <li class="list-group-item">Departure Time : {duration.hours}:{duration.minutes}</li>
+            <li class="list-group-item">AC Seats Available : {AC} </li>
+            <li class="list-group-item">AC Price: Rs {ACPrice}</li>
+            <li class="list-group-item">Sleeper Seats Available : {sleeper} </li>
+            <li class="list-group-item">Sleeper Price: Rs {sleeperPrice}</li>
+        </ul>
+    </div>
     </>
   );
 };
